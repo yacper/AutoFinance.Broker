@@ -30,6 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tws-api-dotnet-standard\InteractiveBrokers.TwsClient\InteractiveBrokers.TwsClient.csproj" />
+    <ProjectReference Include="..\..\TWS API\source\CSharpClient\client\CSharpAPI.csproj" />
   </ItemGroup>
 </Project>

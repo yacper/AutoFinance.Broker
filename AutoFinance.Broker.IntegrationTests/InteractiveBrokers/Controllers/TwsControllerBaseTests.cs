@@ -83,7 +83,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task ContractDetailsController_Should_ReturnValidForexContractAsync()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 0);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -91,7 +91,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
             Contract contract = new Contract();
             contract.Symbol = "EUR";
             contract.SecType = "CASH";
-            contract.Currency = "GBP";
+            contract.Currency = "USD";
             contract.Exchange = "IDEALPRO";
 
             // Call

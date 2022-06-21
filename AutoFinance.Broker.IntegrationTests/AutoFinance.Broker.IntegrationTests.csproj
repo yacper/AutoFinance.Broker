@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\TWS API\source\CSharpClient\client\CSharpAPI.csproj" />
     <ProjectReference Include="..\AutoFinance.Broker\AutoFinance.Broker.csproj" />
-    <ProjectReference Include="..\tws-api-dotnet-standard\InteractiveBrokers.TwsClient\InteractiveBrokers.TwsClient.csproj" />
   </ItemGroup>
 
   <ItemGroup>
