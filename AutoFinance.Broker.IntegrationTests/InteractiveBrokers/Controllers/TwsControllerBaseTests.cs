@@ -28,7 +28,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task AccountUpdatesController_Should_ReturnInformation()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -52,7 +52,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task ContractDetailsController_Should_ReturnValidContractAsync()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -113,7 +113,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_PlaceOrder()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -156,7 +156,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task HistoricalDataController_Should_RetrieveHistoricalData()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -183,7 +183,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_ReturnOpenOrders()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -220,7 +220,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task TwsExecutionController_Should_ReturnOpenOrdersTwice()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -264,7 +264,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task CancelOrder_Should_CancelOrder()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -305,7 +305,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task OrderPlacementController_Should_PlaceOrderSuccessfully2()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -347,7 +347,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task OrderPlacementController_Should_PlaceTwoOrdersSuccessfully()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -393,7 +393,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task OrderPlacementController_Should_PlaceStockOrderSuccessfully()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -437,7 +437,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task OrderPlacementController_Should_HandleErrorCallback()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -477,7 +477,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task OrderPlacementController_Should_PlacePegToMidpointOrder()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -518,7 +518,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task OrderPlacementController_Should_PlaceBracketOrder()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -586,7 +586,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         public async Task PositionsController_Should_ReturnAListOfPositions()
         {
             // Setup
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -626,7 +626,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_GetOptionsContracts()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -671,7 +671,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task MarketDataController_Should_ReturnMarketDataType()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -709,7 +709,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task MarketDataTypeController_Should_ReturnMarketDataType()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -749,7 +749,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task PnLController_Should_ReturnPnL()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -774,7 +774,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         {
             int waitDelayInMs = 5000;
 
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -804,7 +804,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task PnLSingleController_Should_ReturnPnLSingle()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
@@ -858,7 +858,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         {
             int waitDelayInMs = 5000;
 
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsControllerBase twsController = twsObjectFactory.TwsControllerBase;
 
             await twsController.EnsureConnectedAsync();
