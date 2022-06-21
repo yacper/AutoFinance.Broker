@@ -14,7 +14,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_PlaceBracketOrderWithStopLimit()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsController twsController = twsObjectFactory.TwsController;
 
             await twsController.EnsureConnectedAsync();
@@ -38,7 +38,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_PlaceBracketOrderWithStopLimit_ForGrwgContract()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsController twsController = twsObjectFactory.TwsController;
 
             await twsController.EnsureConnectedAsync();
@@ -100,7 +100,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_PlaceBracketForExistingPosition()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsController twsController = twsObjectFactory.TwsController;
 
             await twsController.EnsureConnectedAsync();
@@ -115,7 +115,7 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
         [Fact]
         public async Task Should_CancelAllOrders()
         {
-            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, 1);
+            TwsObjectFactory twsObjectFactory = new TwsObjectFactory("localhost", TestConstants.Port, TestConstants.ClientId);
             ITwsController twsController = twsObjectFactory.TwsController;
 
             await twsController.EnsureConnectedAsync();

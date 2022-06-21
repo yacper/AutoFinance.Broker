@@ -70,6 +70,8 @@ namespace AutoFinance.Broker.IntegrationTests.InteractiveBrokers.Controllers
 
             // Assert
             contractDetails.Should().NotBeNull();
+            System.Diagnostics.Debug.WriteLine(contractDetails.Dump());
+
 
             // Tear down
             await twsController.DisconnectAsync();
